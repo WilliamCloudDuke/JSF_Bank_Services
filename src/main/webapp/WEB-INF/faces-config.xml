@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
         http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	version="2.2">
-	<navigation-rule>
+	<navigation-rule>  
 		<from-view-id>/index.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>create-account</from-outcome>
@@ -12,4 +12,4 @@
 			<redirect />
 		</navigation-case>
 	</navigation-rule>
-</faces-config> sadd
+</faces-config> 
