@@ -17,7 +17,7 @@
 			<div>
 				<label for="acctNumber">Account Number: </label>
 				<h:inputText type="number" id="acctNumber"
-					value="#{createAccount.acctNumber}" required="true">
+					value="#{createAccountBean.acctNumber}" required="true">
 					<f:validator binding="#{accountNumValidator}" />
 				</h:inputText>
 				<h:message for="acctNumber" />
@@ -26,7 +26,7 @@
 			<div>
 				<label for="customer">Customer: </label>
 				<h:inputText type="text" id="customer"
-					value="#{createAccount.customer}" required="true">
+					value="#{createAccountBean.customer}" required="true">
 				</h:inputText>
 			</div>
 			<div>

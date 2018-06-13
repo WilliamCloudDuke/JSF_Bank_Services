@@ -5,21 +5,20 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
 
-	<flow-definition id="create-account">
+	<flow-definition id="createAccount">
 
 		<flow-return id="exit">
-			<from-outcome>/index.xhtml</from-outcome>
+			<from-outcome>/accounts.xhtml</from-outcome>
 		</flow-return>
 
 		<navigation-rule>
-			<from-view-id>/createAccount.xhtml/</from-view-id>
+			<from-view-id>/createAccount/createAccount.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>next</from-outcome>
-				<to-view-id>/createAccountNext</to-view-id>
-				<redirect />
+				<to-view-id>/createAccount/createAccountNext.xhtml</to-view-id>
 			</navigation-case>
-
 		</navigation-rule>
+
 
 	</flow-definition>
 

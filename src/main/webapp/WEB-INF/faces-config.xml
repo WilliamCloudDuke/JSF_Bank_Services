@@ -7,18 +7,17 @@
 
 	<navigation-rule>
 		<from-view-id>/index.xhtml</from-view-id>
-		
 		<navigation-case>
 			<from-outcome>create-account</from-outcome>
-			<to-view-id>/createAccount</to-view-id>
+			<to-view-id>/createAccount/createAccount</to-view-id>
 			<redirect />
 		</navigation-case>
-
 		<navigation-case>
 			<from-outcome>account_detail</from-outcome>
-			<to-view-id>/account_detail</to-view-id>
+			<to-view-id>/createAccount/account_detail</to-view-id>
 			<redirect />
 		</navigation-case>
-
 	</navigation-rule>
+
+	<flow-definition id="createAccount"></flow-definition>
 </faces-config>

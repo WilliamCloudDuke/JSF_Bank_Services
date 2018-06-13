@@ -18,7 +18,7 @@ public class AccountNumValidator implements Validator {
 		System.out.println("AccountNumValidator - validate");
 		boolean valid = false;
 
-		long account = Long.parseLong((String) value);
+		long account = Long.parseLong(value.toString());
 		if (account > 10000) {
 			valid = true;
 		}
