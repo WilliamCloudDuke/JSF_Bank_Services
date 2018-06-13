@@ -16,6 +16,34 @@
 				<h:link outcome="create-account">Create your Account</h:link>
 			</h:panelGrid>
 		</h:form>
+
+		<h:panelGrid columns="1">
+			<h1>Account List</h1>
+			<h:dataTable value="#{accountListBean.accounts}" var="acct"
+				headerClass="tableHeader">
+				<h:column>
+					<f:facet name="header"> Customer</f:facet>
+					#{acct.customer.name}				
+				</h:column>
+
+				<h:column>
+					<f:facet name="header"> Account</f:facet>
+					#{acct.accountnumber}				
+				</h:column>
+
+				<h:column>
+					<f:facet name="header"> Balance</f:facet>
+					#{acct.balance}				
+				</h:column>
+
+				<h:column>
+					<f:facet name="header"> Actions</f:facet>
+					<h:link value="Detail" outcome="account_detail">
+						<f:param name="id" value="#{acct.accountnumber}"></f:param>
+					</h:link>
+				</h:column>
+			</h:dataTable>
+		</h:panelGrid>
 	</f:view>
 </h:body>
 </html>

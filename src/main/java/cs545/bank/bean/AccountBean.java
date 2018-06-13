@@ -27,6 +27,7 @@ public class AccountBean implements Serializable {
 
 	private double txAmount;
 
+	// Default constructor
 	public AccountBean() {
 		super();
 	}
@@ -110,8 +111,5 @@ public class AccountBean implements Serializable {
 	public void setTxAmount(double txAmount) {
 		this.txAmount = txAmount;
 	}
-	
-	
-	
-	
+
 }
