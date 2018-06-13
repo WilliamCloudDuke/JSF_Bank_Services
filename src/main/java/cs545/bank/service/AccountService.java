@@ -1,24 +1,33 @@
 package cs545.bank.service;
 
+import java.io.Serializable;
 import java.util.Collection;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
-import cs545.bank.dao.AccountDAO;
 import cs545.bank.dao.IAccountDAO;
 import cs545.bank.domain.Account;
 import cs545.bank.domain.Customer;
 import cs545.bank.jms.IJMSSender;
 import cs545.bank.jms.JMSSender;
 
-@Named("accountService")
-public class AccountService implements IAccountService {
+@Named
+@ApplicationScoped
+public class AccountService implements IAccountService, Serializable {
 	private IAccountDAO accountDAO;
 	private ICurrencyConverter currencyConverter;
 	private IJMSSender jmsSender;
 
+	// Default no argument constructor
 	public AccountService() {
-		accountDAO = new AccountDAO();
+		super();
+	}
+
+	@Inject
+	public AccountService(IAccountDAO accountDAO) {
+		this.accountDAO = accountDAO;
 		currencyConverter = new CurrencyConverter();
 		jmsSender = new JMSSender();
 	}

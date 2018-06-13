@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import javax.inject.Named;
 
-@Named("customer")
+
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = 1L;
