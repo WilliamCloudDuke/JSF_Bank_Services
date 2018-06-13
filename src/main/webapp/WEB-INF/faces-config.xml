@@ -11,5 +11,5 @@
 			<to-view-id>/createAccount</to-view-id>
 			<redirect />
 		</navigation-case>
-	</navigation-rule>
+	</navigation-rule> 
 </faces-config> 
