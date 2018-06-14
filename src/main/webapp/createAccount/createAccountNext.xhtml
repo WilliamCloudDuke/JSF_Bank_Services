@@ -5,33 +5,40 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html">
 <h:head>
-	<title>Create / Edit Account</title>
+	<title>Account - Deposit</title>
 </h:head>
 <h:body>
 	<p>
-		<a href="index.xhtml">Account List</a>
+		<a href="../index.xhtml">Account Details</a>
 	</p>
-	<h3>Create Account</h3>
+	<h3>Account Details</h3>
 	<f:view>
 		<h:form>
+			<h:message />
 			<div>
-				<label for="acctNumber">Account Number: </label>
-				<h:inputText type="number" id="acctNumber"
-					value="#{createAccount.acctNumber}" required="true">
-					<f:validator binding="#{accountNumValidator}" />
+				<label for="acctNumber">Account Number:</label> <span>#{createAccountBean.acctNumber}</span>
+			</div>
+			<div>
+				<label for="customer">Customer:</label> <span>#{createAccountBean.customer}</span>
+			</div>
+			<div>
+				<label for="balance">Account Balance:</label> <span>#{createAccountBean.balance}</span>
+			</div>
+			<div>
+				<label for="deposit">Deposit Amount:</label>
+				<h:inputText type="number" id="deposit" name="amount"
+					value="#{createAccountBean.deposit}" required="true">
+					<f:validator binding="#{depositAmountValidator}" />
 				</h:inputText>
-				<h:message for="acctNumber" />
+				<h:message for="deposit" />
 			</div>
 
 			<div>
-				<label for="customer">Customer: </label>
-				<h:inputText type="text" id="customer"
-					value="#{createAccount.customer}" required="true">
-				</h:inputText>
+				<h:commandButton value="Back" action="back" />
+				<h:commandButton value="Deposit"
+					action="#{createAccountHelper.process(createAccountBean)}" />
 			</div>
-			<div>
-				<h:commandButton value="Next" action="next"></h:commandButton>
-			</div>
+
 		</h:form>
 	</f:view>
 </h:body>

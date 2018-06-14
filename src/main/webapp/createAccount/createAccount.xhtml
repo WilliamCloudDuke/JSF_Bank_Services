@@ -14,6 +14,15 @@
 	<h3>Create Account</h3>
 	<f:view>
 		<h:form>
+			<h:message />
+			<div>
+				<label for="promotionCode"> Promotion code</label>
+				<h:inputText type="text" id="promotionCode"
+					value="#{createAccountBean.promotionCode}">
+					<f:validator binding="#{promotionCodeValidator}" />
+					<f:converter binding="#{promotionCodeConverter}" />
+				</h:inputText>
+			</div>
 			<div>
 				<label for="acctNumber">Account Number: </label>
 				<h:inputText type="number" id="acctNumber"

@@ -19,6 +19,8 @@ public class CreateAccountBean implements Serializable {
 
 	private double balance;
 
+	private double deposit;
+
 	private boolean isAcctCreated;
 
 	private int promotionCode;
@@ -74,6 +76,14 @@ public class CreateAccountBean implements Serializable {
 
 	public void setPromotionCode(int promotionCode) {
 		this.promotionCode = promotionCode;
+	}
+
+	public double getDeposit() {
+		return deposit;
+	}
+
+	public void setDeposit(double deposit) {
+		this.deposit = deposit;
 	}
 
 }

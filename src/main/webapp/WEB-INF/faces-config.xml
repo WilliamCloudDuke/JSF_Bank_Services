@@ -19,5 +19,37 @@
 		</navigation-case>
 	</navigation-rule>
 
-	<flow-definition id="createAccount"></flow-definition>
+	<flow-definition id="createAccount">
+
+		<flow-return id="exit">
+			<from-outcome>/index.xhtml</from-outcome>
+		</flow-return>
+
+		<navigation-rule>
+			<from-view-id>/createAccount/createAccount.xhtml</from-view-id>
+			<navigation-case>
+				<from-outcome>next</from-outcome>
+				<to-view-id>/createAccount/createAccountNext.xhtml</to-view-id>
+			</navigation-case>
+		</navigation-rule>
+
+		<navigation-rule>
+			<from-view-id>/createAccount/createAccountNext.xhtml</from-view-id>
+			<navigation-case>
+				<from-outcome>back</from-outcome>
+				<to-view-id>/createAccount/createAccount.xhtml</to-view-id>
+			</navigation-case>
+		</navigation-rule>
+
+		<navigation-rule>
+			<from-view-id>/createAccount/createAccountNext.xhtml</from-view-id>
+			<navigation-case>
+				<from-outcome>success</from-outcome>
+				<to-view-id>exit</to-view-id>
+			</navigation-case>
+		</navigation-rule>
+
+
+
+	</flow-definition>
 </faces-config>

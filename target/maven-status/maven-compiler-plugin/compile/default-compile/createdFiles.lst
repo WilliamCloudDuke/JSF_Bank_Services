@@ -1,13 +1,17 @@
 cs545\bank\App.class
 cs545\bank\dao\IAccountDAO.class
+cs545\bank\bean\PromotionCodeValidator.class
 cs545\bank\domain\Customer.class
 cs545\bank\jms\JMSSender.class
+cs545\bank\bean\CreateAccountHelper.class
 cs545\bank\jms\IJMSSender.class
 cs545\bank\dao\AccountDAO.class
 cs545\bank\bean\CreateAccountBean.class
 cs545\bank\service\ICurrencyConverter.class
 cs545\bank\domain\Account.class
+cs545\bank\bean\DepositValidator.class
 cs545\bank\bean\AccountBean.class
+cs545\bank\bean\PromotionCodeConverter.class
 cs545\bank\bean\AccountListBean.class
 cs545\bank\bean\AccountNumValidator.class
 cs545\bank\domain\AccountEntry.class
